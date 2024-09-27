@@ -7,6 +7,64 @@ html {
   margin-bottom: 0;
 }
 
+body {
+  margin: 0;
+  background-color: sandybrown;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (min-width: 576px) {
+  #main {
+    margin-top: 2rem;
+  }
+}
+
+.recipe-card {
+  min-width: 376px;
+  max-width: 768px;
+  background-color: azure;
+}
+@media screen and (min-width: 576px) {
+  .recipe-card {
+    border-radius: 2rem;
+  }
+}
+
+.recipe-img-wrapper {
+  overflow: hidden;
+}
+@media screen and (min-width: 576px) {
+  .recipe-img-wrapper {
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+}
+
+.recipe-img {
+  display: block;
+  width: 100%;
+}
+
+.recipe-copy {
+  padding: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -14,8 +72,4 @@ html {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-body {
-  background-color: azure;
 }

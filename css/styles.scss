@@ -1,9 +1,12 @@
-// Breakpoints
+// Screen widths
+$x-small: 376px;
 $small: 576px;
 $medium: 768px;
 $large: 992px;
 $x-large: 1200px;
-$breakpoint: $medium;
+$xxl-large: 1400px;
+
+$breakpoint: $small;
 
 
 // Base Rules
@@ -17,6 +20,22 @@ html {
     margin-bottom: 0;
 }
 
+body {
+    margin: 0;
+    background-color: sandybrown;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
 
 // Colors
 
@@ -25,9 +44,46 @@ html {
 
 // Layout Rules
 
-#main {}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-#footer {}
+    @media screen and (min-width: $small) {
+        margin-top: 2rem;     
+    }
+}
+
+
+// Module Rules
+
+.recipe-card {
+    min-width: $x-small;
+    max-width: $medium;
+    background-color: azure;
+
+    @media screen and (min-width: $breakpoint) {
+        border-radius: 2rem;
+    }
+}
+
+.recipe-img-wrapper {
+    overflow: hidden;
+
+    @media screen and (min-width: $breakpoint) {
+        margin: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+.recipe-img {
+    display: block;
+    width: 100%;
+}
+
+.recipe-copy {
+    padding: 2rem;
+}
 
 
 .attribution { 
@@ -41,7 +97,3 @@ html {
 
 
 // Dev run-level
-
-body {
-    background-color: azure;
-}
