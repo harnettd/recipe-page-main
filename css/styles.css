@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;
+}
+
+* > * {
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: azure;
+}

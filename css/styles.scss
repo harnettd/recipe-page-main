@@ -1,0 +1,47 @@
+// Breakpoints
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$breakpoint: $medium;
+
+
+// Base Rules
+
+html {
+    font-size: 62.5%;
+}
+
+* > * {
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+
+// Colors
+
+// Fonts
+
+
+// Layout Rules
+
+#main {}
+
+#footer {}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+// Dev run-level
+
+body {
+    background-color: azure;
+}
