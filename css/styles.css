@@ -4,7 +4,7 @@ html {
 
 * > * {
   box-sizing: border-box;
-  margin-bottom: 0;
+  margin-top: 0;
 }
 
 body {
@@ -38,6 +38,7 @@ h3 {
 .recipe-card {
   min-width: 376px;
   max-width: 768px;
+  margin-bottom: 1rem;
   background-color: azure;
 }
 @media screen and (min-width: 576px) {
@@ -45,24 +46,116 @@ h3 {
     border-radius: 2rem;
   }
 }
-
-.recipe-img-wrapper {
+.recipe-card__img-wrapper {
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 576px) {
-  .recipe-img-wrapper {
+  .recipe-card__img-wrapper {
     margin: 2rem;
     border-radius: 2rem;
   }
 }
-
-.recipe-img {
+.recipe-card__img {
   display: block;
   width: 100%;
 }
-
-.recipe-copy {
+.recipe-card__copy-container {
   padding: 2rem;
+}
+.recipe-card__divider {
+  height: 0.2rem;
+  width: 90%;
+  margin-bottom: 1rem;
+  color: grey;
+}
+
+.recipe-name {
+  margin-bottom: 1rem;
+}
+
+.recipe-description {
+  margin-bottom: 1rem;
+}
+
+.prep-time {
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: lightpink;
+}
+.prep-time__header {
+  margin-bottom: 1rem;
+}
+.prep-time__list {
+  padding-left: 2rem;
+}
+.prep-time__item {
+  padding-left: 1rem;
+}
+.prep-time__lbl {
+  color: red;
+}
+
+.ingredients {
+  margin-bottom: 2rem;
+}
+.ingredients__header {
+  margin-bottom: 1rem;
+}
+.ingredients__list {
+  padding-left: 2rem;
+}
+.ingredients__item {
+  padding-left: 1rem;
+}
+
+.instructions {
+  margin-bottom: 2rem;
+}
+.instructions__header {
+  margin-bottom: 1rem;
+}
+.instructions__list {
+  padding-left: 2rem;
+}
+.instructions__item {
+  padding-left: 2rem;
+}
+.instructions__lbl {
+  color: red;
+}
+
+.nutrition {
+  margin-bottom: 1rem;
+}
+.nutrition__header {
+  margin-bottom: 1rem;
+}
+.nutrition__copy {
+  margin-bottom: 1rem;
+}
+.nutrition__table {
+  margin-bottom: 1rem;
+}
+.nutrition__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.nutrition__qty {
+  font-size: 1rem;
+}
+.nutrition__val {
+  font-size: 1rem;
+  color: red;
+}
+.nutrition__divider {
+  height: 0.2rem;
+  width: 90%;
+  margin-bottom: 1rem;
+  color: gray;
 }
 
 .attribution {
