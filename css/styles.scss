@@ -5,8 +5,23 @@ $medium: 768px;
 $large: 992px;
 $x-large: 1200px;
 $xxl-large: 1400px;
-
 $breakpoint: $small;
+
+// Colors
+$white: hsl(0 0% 100%);  //white 
+
+$primary-lighter: hsl(30 54% 90%);  //Stone 100
+$primary-light: hsl(30 18% 87%);  //Stone 150
+$primary: hsl(30, 10%, 34%);  //Stone 600
+$primary-dark: hsl(24, 5%, 18%);  //Stone 900
+
+$secondary: hsl(14 45% 36%);  //Brown 800
+
+$tertiary: hsl(332 51% 32%);  //Rose 800
+$tertiary-light: hsl(330 100% 98%);  //Rose 50
+
+
+// Fonts
 
 
 // Base Rules
@@ -37,9 +52,7 @@ h3 {
     font-size: 1.6rem;
 }
 
-// Colors
 
-// Fonts
 
 
 // Layout Rules
