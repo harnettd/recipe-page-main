@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="" ltr>
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Recipe page</title>
 
@@ -21,7 +26,7 @@
     <div class="recipe-card">
 
       <div class="recipe-card__img-wrapper">
-        <img class="recipe-card__img" src="assets/images/image-omelette.jpeg" alt="A photo of an omelette.">
+        <img class="recipe-card__img" src="assets/images/image-omelette.jpeg" alt="A photo of an omelette." width="1312" height="600">
       </div>
 
       <div class="recipe-card__copy-container">
@@ -44,10 +49,10 @@
         <div class="ingredients">
           <h2 class="ingredients__header">Ingredients</h2>
           <ul class="ingredients__list">
-            <li class="ingredients__item">2-3 large eggs</li>
             <li class="ingredients__item">Salt, to taste</li>
             <li class="ingredients__item">Pepper, to taste</li>
             <li class="ingredients__item">1 tablespoon of butter or oil</li>
+            <li class="ingredients__item">2-3 large eggs</li>
             <li class="ingredients__item">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
           </ul>
         </div>
@@ -65,13 +70,10 @@
               pan over medium heat and add
               butter or oil.</li>
             <li class="instructions__item"><span class="instructions__lbl">Cook the omelette:</span> Once the butter is
-              melted and bubbling, pour in
-              the eggs. Tilt the pan
+              melted and bubbling, pour in the eggs. Tilt the pan
               to ensure the eggs evenly coat the surface.</li>
             <li class="instructions__item"><span class="instructions__lbl">Add fillings (optional):</span> When the eggs
-              begin to set at the edges
-              but are still slightly
-              runny
+              begin to set at the edges but are still slightly runny
               in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
             <li class="instructions__item"><span class="instructions__lbl">Fold and serve:</span> As the omelette
               continues to cook, carefully lift
@@ -124,7 +126,7 @@
     </div>
   </main>
 
-  <!-- <footer>
+  <!-- <footer id="footer">
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Derek Harnett</a>.
