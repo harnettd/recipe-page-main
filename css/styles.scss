@@ -60,7 +60,7 @@ html {
 
 body {
     margin: 0;
-    background-color: sandybrown;
+    // background-color: sandybrown;
 }
 
 
@@ -93,7 +93,6 @@ body {
 
     &__img-wrapper {
         overflow: hidden;
-        margin-bottom: 1rem;
     
         @media screen and (min-width: $breakpoint) {
             margin: 2rem;
@@ -104,39 +103,42 @@ body {
     &__img {
         display: block;
         width: 100%;
+        height: 17rem;
     }
     
     &__copy-container {
-        padding: 2rem;
+        padding: 4rem 3rem 4rem 3.3rem;
     }
 
     &__divider {
-        height: .2rem;
-        width: 90%;
-        margin-bottom: 1rem;
+        margin-bottom: 2.6rem;
+        border-width: .1rem 0 0;
         color: grey;
     }
 }
 
 .recipe-name {
-    margin-bottom: 1rem;
-    @include secondary-font(2rem);
+    margin-bottom: 2.6rem;
+    line-height: 1;
+    @include secondary-font(3.58rem);
 }
 
 .recipe-description {
-    margin-bottom: 1rem;
-    @include primary-font($regular, 1rem);
+    margin-bottom: 2.6rem;
+    @include primary-font($regular, 1.52rem);
+    letter-spacing: .035rem;
+    line-height: 1.6;
 }
 
 .prep-time {
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     border-radius: 1rem;
-    padding: 1rem;
-    background-color: lightpink;
+    padding: 2.5rem 2.4rem;
+    // background-color: lightpink;
 
     &__header {
-        margin-bottom: 1rem;
-        @include primary-font($bold, 1rem);
+        margin-bottom: 1.5rem;
+        @include primary-font($semi-bold, 2rem);
     }
     
     &__list {
@@ -144,53 +146,59 @@ body {
     }
     
     &__item {
-        padding-left: 1rem;
-        @include primary-font($regular, 1rem);
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        @include primary-font($regular, 1.62rem);
+        line-height: 1.4;
     }
     
     &__lbl {
-        @include primary-font($semi-bold, 1rem);
+        @include primary-font($semi-bold, 1.62rem);
     }
 }
 
 .ingredients {
-    margin-bottom: 2rem;
+    margin-bottom: 2.7rem;
 
     &__header {
-        margin-bottom: 1rem;
-        @include secondary-font(1.6rem);
+        margin-bottom: 1.5rem;
+        @include secondary-font(2.8rem);
     }
     
     &__list {
-        padding-left: 2rem;
+        padding-left: 2.1rem;
+        line-height: 1.7;
     }
     
     &__item {
-        padding-left: 1rem;
-        @include primary-font($regular, 1rem);
+        margin-bottom: .5rem;
+        padding-left: 2rem;
+        @include primary-font($regular, 1.58rem);
     }
 
 }
 
 .instructions {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     &__header {
-        margin-bottom: 1rem;
-        @include secondary-font(1.6rem);
+        margin-bottom: 2.1rem;
+        @include secondary-font(2.8rem);
     }
 
     &__list {
-        padding-left: 2rem;
+        padding-left: 2.4rem;
+        line-height: 1.5;
     }
 
     &__item {
-        padding-left: 2rem;
-        @include primary-font($regular, 1rem);
+        padding-left: 1.6rem;
+        margin-bottom: .8rem;
+        @include primary-font($regular, 1.6rem);
     }
 
     &__lbl {
-        @include primary-font($bold, 1rem);
+        @include primary-font($bold, 1.6rem);
     }
 }
 
@@ -198,13 +206,15 @@ body {
     margin-bottom: 1rem;
 
     &__header {
-        margin-bottom: 1rem;
-        @include secondary-font(1.6rem);
+        margin-bottom: 1.7rem;
+        @include secondary-font(2.8rem);
     }
 
     &__copy {
-        margin-bottom: 1rem;
-        @include primary-font($regular, 1rem);
+        margin-bottom: 2.6rem;
+        margin-right: 1rem;
+        @include primary-font($regular, 1.6rem);
+        line-height: 1.5;
     }
 
     &__table {
@@ -220,12 +230,12 @@ body {
 
     &__qty {
         font-size: 1rem;
-        @include primary-font($regular, 1rem);
+        @include primary-font($regular, 1.6rem);
     }
 
     &__val {
         font-size: 1rem;
-        @include primary-font($bold, 1rem);
+        @include primary-font($bold, 1.6rem);
     }
 
     &__divider {
@@ -246,4 +256,11 @@ body {
 }
 
 
-// Dev run-level
+// Development run-level
+body {
+    background-image: url("../design/mobile-design.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-left: 0;
+    opacity: 0.5;
+}
