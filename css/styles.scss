@@ -84,8 +84,8 @@ body {
 .recipe-card {
     min-width: $x-small;
     max-width: $medium;
-    margin-bottom: 1rem;
-    background-color: azure;
+    // margin-bottom: 1rem;
+    // background-color: azure;
 
     @media screen and (min-width: $breakpoint) {
         border-radius: 2rem;
@@ -103,7 +103,7 @@ body {
     &__img {
         display: block;
         width: 100%;
-        height: 17rem;
+        height: 17.1rem;
     }
     
     &__copy-container {
@@ -112,15 +112,16 @@ body {
 
     &__divider {
         margin-bottom: 2.6rem;
+        border-style: solid;
         border-width: .1rem 0 0;
-        color: grey;
+        border-color: grey;
     }
 }
 
 .recipe-name {
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.5rem;
     line-height: 1;
-    @include secondary-font(3.58rem);
+    @include secondary-font(3.59rem);
 }
 
 .recipe-description {
@@ -131,7 +132,7 @@ body {
 }
 
 .prep-time {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
     border-radius: 1rem;
     padding: 2.5rem 2.4rem;
     // background-color: lightpink;
@@ -142,18 +143,18 @@ body {
     }
     
     &__list {
-        padding-left: 2rem;
+        padding-left: 2.1rem;
+        line-height: 1.4;
     }
     
     &__item {
         margin-bottom: 1rem;
         padding-left: 2rem;
-        @include primary-font($regular, 1.62rem);
-        line-height: 1.4;
+        @include primary-font($regular, 1.6rem);
     }
     
     &__lbl {
-        @include primary-font($semi-bold, 1.62rem);
+        @include primary-font($semi-bold, 1.6rem);
     }
 }
 
@@ -167,32 +168,32 @@ body {
     
     &__list {
         padding-left: 2.1rem;
-        line-height: 1.7;
+        line-height: 1.678;
     }
     
     &__item {
         margin-bottom: .5rem;
-        padding-left: 2rem;
-        @include primary-font($regular, 1.58rem);
+        padding-left: 1.9rem;
+        @include primary-font($regular, 1.6rem);
     }
 
 }
 
 .instructions {
-    margin-bottom: 3rem;
+    margin-bottom: 3.1rem;
 
     &__header {
-        margin-bottom: 2.1rem;
+        margin-bottom: 1.8rem;
         @include secondary-font(2.8rem);
     }
 
     &__list {
-        padding-left: 2.4rem;
+        padding-left: 2.5rem;
         line-height: 1.5;
     }
 
     &__item {
-        padding-left: 1.6rem;
+        padding-left: 1.5rem;
         margin-bottom: .8rem;
         @include primary-font($regular, 1.6rem);
     }
@@ -206,7 +207,7 @@ body {
     margin-bottom: 1rem;
 
     &__header {
-        margin-bottom: 1.7rem;
+        margin-bottom: 1.8rem;
         @include secondary-font(2.8rem);
     }
 
@@ -218,32 +219,30 @@ body {
     }
 
     &__table {
-        margin-bottom: 1rem;
-    }
-
-    &__row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
         margin-bottom: 1rem;
     }
 
     &__qty {
-        font-size: 1rem;
+        padding-left: 3.2rem;
         @include primary-font($regular, 1.6rem);
     }
 
     &__val {
-        font-size: 1rem;
+        padding-right: 9.4rem;
         @include primary-font($bold, 1.6rem);
     }
 
-    &__divider {
-        height: .2rem;
-        width: 90%;
-        margin-bottom: 1rem;
-        color: gray;
+    &__table-divider {
+        grid-column: 1 / 3;
+        border-width: .1rem 0 0;
+        border-color: black;
+        border-style: solid;
+        margin: 1.36rem 0;
     }
+
 }
 
 .attribution { 
