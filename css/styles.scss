@@ -9,13 +9,12 @@ $breakpoint: $small;
 
 
 // Colors
-
 $white: hsl(0 0% 100%);  // white 
 
 $primary-lighter: hsl(30 54% 90%);  // Stone 100
 $primary-light: hsl(30 18% 87%);  // Stone 150
-$primary: hsl(30, 10%, 34%);  // Stone 600
-$primary-dark: hsl(24, 5%, 18%);  // Stone 900
+$primary: hsl(30 10% 34%);  // Stone 600
+$primary-dark: hsl(24 5% 18%);  // Stone 900
 
 $secondary: hsl(14 45% 36%);  // Brown 800
 
@@ -131,6 +130,19 @@ body {
     line-height: 1.6;
 }
 
+%vert-centred {
+    display: flex;
+    align-items: center;
+}
+
+%vert-centred-bullet {
+    content: "";
+    margin-right: 2.8rem;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+}
+
 .prep-time {
     margin-bottom: 3.2rem;
     border-radius: 1rem;
@@ -144,22 +156,15 @@ body {
     
     &__list {
         padding-left: .8rem;
-        // list-style-type: none;
     }
 
     &__item {
-        display: flex;
-        align-items: center;
+        @extend %vert-centred;
         margin-bottom: 1rem;
-        // padding-left: 2rem;
     }
 
     &__item::before {
-        content: "";
-        margin-right: 2.8rem;
-        width: .4rem;
-        height: .4rem;
-        border-radius: 50%;
+        @extend %vert-centred-bullet;
         background: black;
     }
 
@@ -188,18 +193,12 @@ body {
     }
     
     &__item {
-        display: flex;
-        align-items: center;
+        @extend %vert-centred;
         margin-bottom: .5rem;
-        // padding-left: 1.9rem;
     }
 
     &__item::before {
-        content: "";
-        margin-right: 2.8rem;
-        width: .4rem;
-        height: .4rem;
-        border-radius: 50%;
+        @extend %vert-centred-bullet;
         background: black;
     }
 
