@@ -84,20 +84,30 @@ body {
   font-size: 2rem;
 }
 .prep-time__list {
-  padding-left: 2.1rem;
-  line-height: 1.4;
+  padding-left: 0.8rem;
 }
 .prep-time__item {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
-  padding-left: 2rem;
+}
+.prep-time__item::before {
+  content: "";
+  margin-right: 2.8rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: black;
+}
+.prep-time__item-txt, .prep-time__item-txt--lbl {
+  margin-bottom: 0;
+  line-height: 1.4;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.61rem;
 }
-.prep-time__lbl {
-  font-family: "Outfit", sans-serif;
+.prep-time__item-txt--lbl {
   font-weight: 600;
-  font-size: 1.6rem;
 }
 
 .ingredients {

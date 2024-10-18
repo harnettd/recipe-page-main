@@ -143,18 +143,35 @@ body {
     }
     
     &__list {
-        padding-left: 2.1rem;
-        line-height: 1.4;
+        padding-left: .8rem;
+        // list-style-type: none;
     }
-    
+
     &__item {
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
-        padding-left: 2rem;
-        @include primary-font($regular, 1.6rem);
+        // padding-left: 2rem;
     }
-    
-    &__lbl {
-        @include primary-font($semi-bold, 1.6rem);
+
+    &__item::before {
+        content: "";
+        margin-right: 2.8rem;
+        width: .4rem;
+        height: .4rem;
+        border-radius: 50%;
+        background: black;
+    }
+
+    &__item-txt {
+        margin-bottom: 0;
+        line-height: 1.4;
+        @include primary-font($regular, 1.61rem);
+    }
+
+    &__item-txt--lbl {
+        @extend .prep-time__item-txt;
+        font-weight: $semi-bold;
     }
 }
 
