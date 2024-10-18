@@ -59,7 +59,11 @@ html {
 
 body {
     margin: 0;
-    // background-color: sandybrown;
+    background-color: $primary-lighter;
+
+    @media screen and (min-width: $breakpoint) {
+        margin: 12.3rem 0;
+    }
 }
 
 
@@ -70,7 +74,7 @@ body {
     justify-content: center;
     align-items: flex-start;
 
-    @media screen and (min-width: $small) {
+    @media screen and (min-width: $breakpoint) {
         margin-top: 2rem;     
     }
 }
@@ -82,7 +86,7 @@ body {
 
 .recipe-card {
     min-width: $x-small;
-    max-width: $medium;
+    max-width: 73.6rem;
     // margin-bottom: 1rem;
     background-color: $white;
 
@@ -94,8 +98,8 @@ body {
         overflow: hidden;
     
         @media screen and (min-width: $breakpoint) {
-            margin: 2rem;
-            border-radius: 2rem;
+            margin: 4rem 4rem 0;
+            border-radius: 1rem;
         }
     }
     
@@ -103,10 +107,19 @@ body {
         display: block;
         width: 100%;
         height: 17.1rem;
+
+        @media screen and (min-width: $breakpoint) {
+            height: 30rem;
+        }
+
     }
     
     &__copy-container {
         padding: 4rem 3rem 3.2rem 3.3rem;
+
+        @media screen and (min-width: $breakpoint) {
+            padding-left: 4rem;
+        }
     }
 
     &__divider {
@@ -114,6 +127,10 @@ body {
         border-style: solid;
         border-width: .1rem 0 0;
         border-color: $primary-lighter;
+
+        @media screen and (min-width: $breakpoint) {
+            margin-bottom: 2.7rem;
+        }
     }
 }
 
@@ -122,6 +139,10 @@ body {
     line-height: 1;
     @include secondary-font(3.59rem);
     color: $primary-dark;
+
+    @media screen and (min-width: $breakpoint) {
+        font-size: 4rem;
+    }
 }
 
 .recipe-description {
@@ -151,6 +172,12 @@ body {
     border-radius: 1rem;
     padding: 2.1rem 3rem 1rem 2.4rem;
     background-color: $tertiary-light;
+
+    @media screen and (min-width: $breakpoint) {
+        margin-bottom: 3rem;
+        padding: 2.5rem 3rem 1.4rem 2.8rem;
+    }
+
 
     &__header {
         margin-bottom: 1.5rem;
@@ -188,6 +215,11 @@ body {
 .ingredients {
     margin-bottom: 2.7rem;
 
+    @media screen and (min-width: $breakpoint) {
+        margin-bottom: 3rem;
+    }
+
+
     &__header {
         margin-bottom: 1.6rem;
         @include secondary-font(2.8rem);
@@ -219,6 +251,10 @@ body {
 .instructions {
     margin-bottom: 3.1rem;
 
+    @media screen and (min-width: $breakpoint) {
+        margin-bottom: 3rem;
+    }
+
     &__header {
         margin-bottom: 1.8rem;
         @include secondary-font(2.8rem);
@@ -228,6 +264,10 @@ body {
     &__list {
         padding-left: 2.5rem;
         line-height: 1.5;
+
+        @media screen and (min-width: $breakpoint) {
+            padding-right: 1rem;
+        }
     }
 
     &__item {
@@ -281,6 +321,10 @@ body {
         padding-right: 9.4rem;
         @include primary-font($bold, 1.6rem);
         color: $secondary;
+
+        @media screen and (min-width: $breakpoint) {
+            padding-right: 27.5rem;
+        }
     }
 
     &__table-divider {
@@ -304,9 +348,10 @@ body {
 
 // Development run-level
 body {
-    // background-image: url("../design/mobile-design.jpg");
+    background-image: url("../design/desktop-design.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+    // margin-top: 0;
     margin-left: 0;
-    // opacity: 0.5;
+    opacity: 0.5;
 }

@@ -9,6 +9,12 @@ html {
 
 body {
   margin: 0;
+  background-color: hsl(30, 54%, 90%);
+}
+@media screen and (min-width: 576px) {
+  body {
+    margin: 12.3rem 0;
+  }
 }
 
 #main {
@@ -24,7 +30,7 @@ body {
 
 .recipe-card {
   min-width: 376px;
-  max-width: 768px;
+  max-width: 73.6rem;
   background-color: hsl(0, 0%, 100%);
 }
 @media screen and (min-width: 576px) {
@@ -37,8 +43,8 @@ body {
 }
 @media screen and (min-width: 576px) {
   .recipe-card__img-wrapper {
-    margin: 2rem;
-    border-radius: 2rem;
+    margin: 4rem 4rem 0;
+    border-radius: 1rem;
   }
 }
 .recipe-card__img {
@@ -46,14 +52,29 @@ body {
   width: 100%;
   height: 17.1rem;
 }
+@media screen and (min-width: 576px) {
+  .recipe-card__img {
+    height: 30rem;
+  }
+}
 .recipe-card__copy-container {
   padding: 4rem 3rem 3.2rem 3.3rem;
+}
+@media screen and (min-width: 576px) {
+  .recipe-card__copy-container {
+    padding-left: 4rem;
+  }
 }
 .recipe-card__divider {
   margin-bottom: 2.6rem;
   border-style: solid;
   border-width: 0.1rem 0 0;
   border-color: hsl(30, 54%, 90%);
+}
+@media screen and (min-width: 576px) {
+  .recipe-card__divider {
+    margin-bottom: 2.7rem;
+  }
 }
 
 .recipe-name {
@@ -63,6 +84,11 @@ body {
   font-weight: 400;
   font-size: 3.59rem;
   color: hsl(24, 5%, 18%);
+}
+@media screen and (min-width: 576px) {
+  .recipe-name {
+    font-size: 4rem;
+  }
 }
 
 .recipe-description {
@@ -95,6 +121,12 @@ body {
   padding: 2.1rem 3rem 1rem 2.4rem;
   background-color: hsl(330, 100%, 98%);
 }
+@media screen and (min-width: 576px) {
+  .prep-time {
+    margin-bottom: 3rem;
+    padding: 2.5rem 3rem 1.4rem 2.8rem;
+  }
+}
 .prep-time__header {
   margin-bottom: 1.5rem;
   font-family: "Outfit", sans-serif;
@@ -126,6 +158,11 @@ body {
 .ingredients {
   margin-bottom: 2.7rem;
 }
+@media screen and (min-width: 576px) {
+  .ingredients {
+    margin-bottom: 3rem;
+  }
+}
 .ingredients__header {
   margin-bottom: 1.6rem;
   font-family: "Young Serif", serif;
@@ -154,6 +191,11 @@ body {
 .instructions {
   margin-bottom: 3.1rem;
 }
+@media screen and (min-width: 576px) {
+  .instructions {
+    margin-bottom: 3rem;
+  }
+}
 .instructions__header {
   margin-bottom: 1.8rem;
   font-family: "Young Serif", serif;
@@ -164,6 +206,11 @@ body {
 .instructions__list {
   padding-left: 2.5rem;
   line-height: 1.5;
+}
+@media screen and (min-width: 576px) {
+  .instructions__list {
+    padding-right: 1rem;
+  }
 }
 .instructions__item {
   padding-left: 1.5rem;
@@ -222,6 +269,11 @@ body {
   font-size: 1.6rem;
   color: hsl(14, 45%, 36%);
 }
+@media screen and (min-width: 576px) {
+  .nutrition__val {
+    padding-right: 27.5rem;
+  }
+}
 .nutrition__table-divider {
   grid-column: 1/3;
   border-width: 0.1rem 0 0;
@@ -240,7 +292,9 @@ body {
 }
 
 body {
+  background-image: url("../design/desktop-design.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   margin-left: 0;
+  opacity: 0.5;
 }/*# sourceMappingURL=styles.css.map */
