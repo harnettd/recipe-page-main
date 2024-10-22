@@ -7,20 +7,18 @@ $x-large: 1200px;
 $xxl-large: 1400px;
 $breakpoint: $small;
 
-
 // Colors
-$white: hsl(0 0% 100%);  // white 
+$white: hsl(0 0% 100%); // white
 
-$primary-lighter: hsl(30 54% 90%);  // Stone 100
-$primary-light: hsl(30 18% 87%);  // Stone 150
-$primary: hsl(30 10% 34%);  // Stone 600
-$primary-dark: hsl(24 5% 18%);  // Stone 900
+$primary-lighter: hsl(30 54% 90%); // Stone 100
+$primary-light: hsl(30 18% 87%); // Stone 150
+$primary: hsl(30 10% 34%); // Stone 600
+$primary-dark: hsl(24 5% 18%); // Stone 900
 
-$secondary: hsl(14 45% 36%);  // Brown 800
+$secondary: hsl(14 45% 36%); // Brown 800
 
-$tertiary: hsl(332 51% 32%);  // Rose 800
-$tertiary-light: hsl(330 100% 98%);  // Rose 50
-
+$tertiary: hsl(332 51% 32%); // Rose 800
+$tertiary-light: hsl(330 100% 98%); // Rose 50
 
 // Fonts
 
@@ -30,328 +28,312 @@ $semi-bold: 600;
 $bold: 700;
 
 @mixin font($family, $fallback, $weight, $size) {
-    font: {
-        family: $family, $fallback;
-        weight: $weight;
-        size: $size;
-    }
+  font: {
+    family: $family, $fallback;
+    weight: $weight;
+    size: $size;
+  }
 }
 
 @mixin primary-font($weight, $size) {
-    @include font("Outfit", sans-serif, $weight, $size);
+  @include font("Outfit", sans-serif, $weight, $size);
 }
 
 @mixin secondary-font($size) {
-    @include font("Young Serif", serif, $regular, $size);
+  @include font("Young Serif", serif, $regular, $size);
 }
-
 
 // Base Rules
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 * > * {
-    box-sizing: border-box;
-    margin-top: 0;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 
 body {
-    margin: 0;
-    background-color: $primary-lighter;
+  margin: 0;
+  background-color: $primary-lighter;
 
-    @media screen and (min-width: $breakpoint) {
-        margin: 12.3rem 0;
-    }
+  @media screen and (min-width: $breakpoint) {
+    margin: 12.3rem 0;
+  }
 }
-
 
 // Layout Rules
 
 #main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
-    @media screen and (min-width: $breakpoint) {
-        margin-top: 2rem;     
-    }
+  @media screen and (min-width: $breakpoint) {
+    margin-top: 2rem;
+  }
 }
 
 // #footer {}
 
-
 // Module Rules
 
 .recipe-card {
-    min-width: $x-small;
-    max-width: 73.6rem;
-    // margin-bottom: 1rem;
-    background-color: $white;
+  min-width: $x-small;
+  max-width: 73.6rem;
+  background-color: $white;
+
+  @media screen and (min-width: $breakpoint) {
+    border-radius: 2rem;
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
 
     @media screen and (min-width: $breakpoint) {
-        border-radius: 2rem;
+      margin: 4rem 4rem 0;
+      border-radius: 1rem;
     }
+  }
 
-    &__img-wrapper {
-        overflow: hidden;
-    
-        @media screen and (min-width: $breakpoint) {
-            margin: 4rem 4rem 0;
-            border-radius: 1rem;
-        }
+  &__img {
+    display: block;
+    width: 100%;
+    // height: 17.1rem;
+    height: auto;
+
+    @media screen and (min-width: $breakpoint) {
+      // height: 30rem;
+      height: auto;
     }
-    
-    &__img {
-        display: block;
-        width: 100%;
-        height: 17.1rem;
+  }
 
-        @media screen and (min-width: $breakpoint) {
-            height: 30rem;
-        }
+  &__copy-container {
+    padding: 4rem 3rem 3.2rem 3.3rem;
 
+    @media screen and (min-width: $breakpoint) {
+      padding-left: 4rem;
     }
-    
-    &__copy-container {
-        padding: 4rem 3rem 3.2rem 3.3rem;
+  }
 
-        @media screen and (min-width: $breakpoint) {
-            padding-left: 4rem;
-        }
+  &__divider {
+    margin-bottom: 2.6rem;
+    border-style: solid;
+    border-width: 0.1rem 0 0;
+    border-color: $primary-lighter;
+
+    @media screen and (min-width: $breakpoint) {
+      margin-bottom: 2.7rem;
     }
-
-    &__divider {
-        margin-bottom: 2.6rem;
-        border-style: solid;
-        border-width: .1rem 0 0;
-        border-color: $primary-lighter;
-
-        @media screen and (min-width: $breakpoint) {
-            margin-bottom: 2.7rem;
-        }
-    }
+  }
 }
 
 .recipe-name {
-    margin-bottom: 2.5rem;
-    line-height: 1;
-    @include secondary-font(3.59rem);
-    color: $primary-dark;
+  margin-bottom: 2.5rem;
+  line-height: 1;
+  @include secondary-font(3.59rem);
+  color: $primary-dark;
 
-    @media screen and (min-width: $breakpoint) {
-        font-size: 4rem;
-    }
+  @media screen and (min-width: $breakpoint) {
+    font-size: 4rem;
+  }
 }
 
 .recipe-description {
-    margin-bottom: 3rem;
-    @include primary-font($regular, 1.52rem);
-    letter-spacing: .035rem;
-    line-height: 1.6;
-    color: $primary;
+  margin-bottom: 3rem;
+  @include primary-font($regular, 1.52rem);
+  letter-spacing: 0.035rem;
+  line-height: 1.6;
+  color: $primary;
 }
 
 %vert-centred {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 %vert-centred-bullet {
-    flex-shrink: 0;
-    content: "";
-    margin-right: 2.8rem;
-    width: .4rem;
-    height: .4rem;
-    border-radius: 50%;
+  flex-shrink: 0;
+  content: "";
+  margin-right: 2.8rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
 }
 
 .prep-time {
-    margin-bottom: 3.2rem;
-    border-radius: 1rem;
-    padding: 2.1rem 3rem 1rem 2.4rem;
-    background-color: $tertiary-light;
+  margin-bottom: 3.2rem;
+  border-radius: 1rem;
+  padding: 2.1rem 3rem 1rem 2.4rem;
+  background-color: $tertiary-light;
 
-    @media screen and (min-width: $breakpoint) {
-        margin-bottom: 3rem;
-        padding: 2.5rem 3rem 1.4rem 2.8rem;
-    }
+  @media screen and (min-width: $breakpoint) {
+    margin-bottom: 3rem;
+    padding: 2.5rem 3rem 1.4rem 2.8rem;
+  }
 
+  &__header {
+    margin-bottom: 1.5rem;
+    @include primary-font($semi-bold, 2rem);
+    color: $tertiary;
+  }
 
-    &__header {
-        margin-bottom: 1.5rem;
-        @include primary-font($semi-bold, 2rem);
-        color: $tertiary;
-    }
-    
-    &__list {
-        padding-left: .8rem;
-    }
+  &__list {
+    padding-left: 0.8rem;
+  }
 
-    &__item {
-        @extend %vert-centred;
-        margin-bottom: 1rem;
-    }
+  &__item {
+    @extend %vert-centred;
+    margin-bottom: 1rem;
+  }
 
-    &__item::before {
-        @extend %vert-centred-bullet;
-        background: black;
-    }
+  &__item::before {
+    @extend %vert-centred-bullet;
+    background: black;
+  }
 
-    &__item-txt {
-        margin-bottom: 0;
-        line-height: 1.4;
-        @include primary-font($regular, 1.61rem);
-        color: $primary;
-    }
+  &__item-txt {
+    margin-bottom: 0;
+    line-height: 1.4;
+    @include primary-font($regular, 1.61rem);
+    color: $primary;
+  }
 
-    &__item-txt--lbl {
-        @extend .prep-time__item-txt;
-        font-weight: $semi-bold;
-    }
+  &__item-txt--lbl {
+    @extend .prep-time__item-txt;
+    font-weight: $semi-bold;
+  }
 }
 
 .ingredients {
-    margin-bottom: 2.7rem;
+  margin-bottom: 2.7rem;
 
-    @media screen and (min-width: $breakpoint) {
-        margin-bottom: 3rem;
-    }
+  @media screen and (min-width: $breakpoint) {
+    margin-bottom: 3rem;
+  }
 
+  &__header {
+    margin-bottom: 1.6rem;
+    @include secondary-font(2.8rem);
+    color: $secondary;
+  }
 
-    &__header {
-        margin-bottom: 1.6rem;
-        @include secondary-font(2.8rem);
-        color: $secondary;
-    }
-    
-    &__list {
-        padding-left: .8rem;
-    }
-    
-    &__item {
-        @extend %vert-centred;
-        margin-bottom: .5rem;
-    }
+  &__list {
+    padding-left: 0.8rem;
+  }
 
-    &__item::before {
-        @extend %vert-centred-bullet;
-        background: black;
-    }
+  &__item {
+    @extend %vert-centred;
+    margin-bottom: 0.5rem;
+  }
 
-    &__item-txt{
-        margin-bottom: 0;
-        line-height: 1.67;
-        @include primary-font($regular, 1.6rem);
-        color: $primary;
-    }
+  &__item::before {
+    @extend %vert-centred-bullet;
+    background: black;
+  }
+
+  &__item-txt {
+    margin-bottom: 0;
+    line-height: 1.67;
+    @include primary-font($regular, 1.6rem);
+    color: $primary;
+  }
 }
 
 .instructions {
-    margin-bottom: 3.1rem;
+  margin-bottom: 3.1rem;
+
+  @media screen and (min-width: $breakpoint) {
+    margin-bottom: 3rem;
+  }
+
+  &__header {
+    margin-bottom: 1.8rem;
+    @include secondary-font(2.8rem);
+    color: $secondary;
+  }
+
+  &__list {
+    padding-left: 2.5rem;
+    line-height: 1.5;
 
     @media screen and (min-width: $breakpoint) {
-        margin-bottom: 3rem;
+      padding-right: 1rem;
     }
+  }
 
-    &__header {
-        margin-bottom: 1.8rem;
-        @include secondary-font(2.8rem);
-        color: $secondary;
-    }
+  &__item {
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    @include primary-font($regular, 1.6rem);
+    color: $primary;
+  }
 
-    &__list {
-        padding-left: 2.5rem;
-        line-height: 1.5;
+  &__item::marker {
+    font-weight: $bold;
+    color: $secondary;
+  }
 
-        @media screen and (min-width: $breakpoint) {
-            padding-right: 1rem;
-        }
-    }
-
-    &__item {
-        padding-left: 1.5rem;
-        margin-bottom: .8rem;
-        @include primary-font($regular, 1.6rem);
-        color: $primary;
-    }
-
-    &__item::marker {
-        font-weight: $bold;
-        color: $secondary;
-    }
-
-    &__lbl {
-        @include primary-font($bold, 1.6rem);
-    }
+  &__lbl {
+    @include primary-font($bold, 1.6rem);
+  }
 }
 
 .nutrition {
+  margin-bottom: 1rem;
+
+  &__header {
+    margin-bottom: 1.8rem;
+    @include secondary-font(2.8rem);
+    color: $secondary;
+  }
+
+  &__copy {
+    margin-bottom: 2.6rem;
+    margin-right: 1rem;
+    @include primary-font($regular, 1.6rem);
+    line-height: 1.5;
+    color: $primary;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
     margin-bottom: 1rem;
+  }
 
-    &__header {
-        margin-bottom: 1.8rem;
-        @include secondary-font(2.8rem);
-        color: $secondary;
+  &__qty {
+    padding-left: 3.2rem;
+    @include primary-font($regular, 1.6rem);
+    color: $primary;
+  }
+
+  &__val {
+    padding-right: 9.4rem;
+    @include primary-font($bold, 1.6rem);
+    color: $secondary;
+
+    @media screen and (min-width: $breakpoint) {
+      padding-right: 27.5rem;
     }
+  }
 
-    &__copy {
-        margin-bottom: 2.6rem;
-        margin-right: 1rem;
-        @include primary-font($regular, 1.6rem);
-        line-height: 1.5;
-        color: $primary;
-    }
-
-    &__table {
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-
-    &__qty {
-        padding-left: 3.2rem;
-        @include primary-font($regular, 1.6rem);
-        color: $primary;
-    }
-
-    &__val {
-        padding-right: 9.4rem;
-        @include primary-font($bold, 1.6rem);
-        color: $secondary;
-
-        @media screen and (min-width: $breakpoint) {
-            padding-right: 27.5rem;
-        }
-    }
-
-    &__table-divider {
-        grid-column: 1 / 3;
-        border-width: .1rem 0 0;
-        border-color: $primary-light;
-        border-style: solid;
-        margin: 1.36rem 0;
-    }
+  &__table-divider {
+    grid-column: 1 / 3;
+    border-width: 0.1rem 0 0;
+    border-color: $primary-light;
+    border-style: solid;
+    margin: 1.36rem 0;
+  }
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
-
-// Development run-level
-body {
-    background-image: url("../design/desktop-design.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    // margin-top: 0;
-    margin-left: 0;
-    opacity: 0.5;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
